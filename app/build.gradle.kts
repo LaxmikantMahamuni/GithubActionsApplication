@@ -8,11 +8,11 @@ plugins {
 }
 
 
-val keystorePropertiesFile = rootProject.file("map_secrets.properties")
-val keystoreProperties = Properties()
-keystoreProperties.load(FileInputStream(keystorePropertiesFile))
-
-println("Property: ${keystoreProperties.getProperty("gmpApiKey")}")
+//val keystorePropertiesFile = rootProject.file("map_secrets.properties")
+//val keystoreProperties = Properties()
+//keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+//
+//println("Property: ${keystoreProperties.getProperty("gmpApiKey")}")
 
 android {
     namespace = "com.example.githubactionsapplication"
