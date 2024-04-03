@@ -1,7 +1,18 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
+
+
+val keystorePropertiesFile = rootProject.file("map_secrets.properties")
+val keystoreProperties = Properties()
+keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+
+println("Property: ${keystoreProperties.getProperty("gmpApiKey")}")
 
 android {
     namespace = "com.example.githubactionsapplication"
